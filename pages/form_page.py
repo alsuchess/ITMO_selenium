@@ -13,5 +13,8 @@ class FormPage(BasePage):
         self.gender_radio_1 = WebElement(driver, '#gender-radio-1')
         self.user_number = WebElement(driver, '#userNumber')
         self.btn_submit = WebElement(driver, '#submit')
-        self.modal_dialog = WebElement(driver, '#body > div.fade.modal.show > div')
+        self.modal_dialog = WebElement(driver, 'body > div.fade.modal.show > div > div > div.modal-body')
         self.btn_close_modal = WebElement(driver, '#closeLargeModal')
+
+        self.hobbies = WebElement(driver, '#hobbies-checkbox-1')
+        self.current_address = WebElement(driver, '#currentAddress')
