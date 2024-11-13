@@ -9,3 +9,4 @@ def test_clear(browser):
     assert text_box.name.get_dom_attribute(name='placeholder') == 'Full Name'
 
 
+

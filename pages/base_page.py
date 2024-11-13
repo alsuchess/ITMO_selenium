@@ -1,5 +1,4 @@
-from selenium.webdriver.common.by import By
-import time
+import logging
 
 class BasePage:
 
@@ -29,4 +28,11 @@ class BasePage:
         if self.get_url() == self.base_url:
             return True
         else:
+            return False
+
+    def alert(self):
+        try:
+            return self.driver.switch_to.alert
+        except Exception as ex:
+            logging.log(1,ex)
             return False

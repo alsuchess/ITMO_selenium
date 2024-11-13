@@ -75,3 +75,8 @@ class WebElement:
         self.driver.execute_script('window.scrollTo(0, document.body.scrollHeight);', self.find_element())
 
 
+    def check_css(self, style, value=''):
+        return self.find_element().value_of_css_property(style) == value
+
+
+
